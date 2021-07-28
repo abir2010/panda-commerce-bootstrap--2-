@@ -20,7 +20,7 @@
     <header>
         <!-- navigation part -->
         <section class="container mt-3">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#"><img class="w-75" src="images/logo.png" alt=""></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,13 +36,70 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                       </li>
                       <li class="nav-item ms-2">
-                        <a class="nav-link active" href="#">Product</a>
+                        <div class="dropdown">
+                          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#shoes">Shoes</a></li>
+                            <li><a class="dropdown-item" href="#backpacks">Backpacks</a></li>
+                            <li><a class="dropdown-item" href="#watches">Watches</a></li>
+                          </ul>
+                        </div>
                       </li>
                       <li class="nav-item ms-2">
-                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">About us</a>
+                        <a class="nav-link active" href="#contactus" tabindex="-1" aria-disabled="true">Contact us</a>
                       </li>
+                      <!-- offcanvas part -->
                       <li class="nav-item ms-2">
-                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Contact us</a>
+                        <a class="btn btn-dark bg-gradient" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">
+                          More
+                        </a>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                          <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel"><img class="w-75" src="images/logo.png" alt=""></h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                          </div>
+                          <div class="offcanvas-body">
+                            <div class="fw-bold mb-3">
+                              Select your option down here
+                            </div>
+                            <ul>
+                              <li>
+                                <div class="">
+                                  <a class="nav-link active fw-bold" href="login.html" tabindex="-1" aria-disabled="true">Login</a>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="dropdown">
+                                  <button class="btn fw-bold dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                    Brands
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Rolex</a></li>
+                                    <li><a class="dropdown-item" href="#">Navy-force</a></li>
+                                    <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+                                    <li><a class="dropdown-item" href="#">Walton</a></li>
+                                    <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                    <li><a class="dropdown-item" href="#">Nike</a></li>
+                                    <li><a class="dropdown-item" href="#">Puma</a></li>
+                                    <li><a class="dropdown-item" href="#">Adidas</a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="">
+                                  <a class="nav-link active fw-bold" href="#" tabindex="-1" aria-disabled="true">About Us</a>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="">
+                                  <a class="nav-link active fw-bold" href="#" tabindex="-1" aria-disabled="true">Your cart</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -128,7 +185,7 @@
     </header>
     <main style="background-color: rgb(240, 239, 239);">
         <!-- shoes part -->
-        <section class="container py-5">
+        <section class="container py-5" id="shoes">
             <h3 class="fw-bold">Shoes</h3>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col col-md-6 col-lg-4">
@@ -173,7 +230,7 @@
               </div>
         </section>
         <!-- backpack part -->
-        <section class="container py-5">
+        <section class="container py-5" id="backpacks">
             <h3 class="fw-bold">Backpacks</h3>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col col-md-6 col-lg-4">
@@ -225,8 +282,46 @@
                 <h2 class="fw-bold">Let's stay in Touch</h2>
                 <p>Our updates on sales specials and more</p>
                 <input type="text" placeholder="Enter your e-mail" class="border-0 w-50 p-2">
-                <buttoon class="btn btn-dark">Buy Now<i class="ms-2 fas fa-arrow-circle-right"></i></buttoon>
+                <buttoon class="btn btn-dark">Submit<i class="ms-2 fas fa-arrow-circle-right"></i></buttoon>
             </div>
+        </section>
+        <!-- about us part -->
+        <section class="container mb-2 text-center" id="contactus">
+          <p>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click here to see Important Notes</a>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  If you have any issues with our customer care service. <br> please call us at 01626042433
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- modal part -->
+        <section class="container mb-2 text-center">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Reset Everything
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Are You sure?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 This will remove all your changes in the site.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- ending part -->
         <section class="container search-box-color">
